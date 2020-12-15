@@ -16,37 +16,37 @@ Olimpia Milano - Cantù | 55 - 60
   // Creo un array di matches
 
     $matches = [
-      "Treviso - Cremona" => [
+      [
         "squadra di casa" => "Universo Treviso",
         "squadra ospite" => "Cremona",
         "punti squadra di casa" => "68",
         "punti squadra ospite" => "75"
       ],
-      "Cantù - Trieste" => [
+      [
         "squadra di casa" => "Cantù",
         "squadra ospite" => "Trieste",
         "punti squadra di casa" => "82",
         "punti squadra ospite" => "79"
       ],
-      "Reggiana - Fortitudo" => [
+      [
         "squadra di casa" => "Reggiana",
         "squadra ospite" => "Fortitudo Bologna",
         "punti squadra di casa" => "71",
         "punti squadra ospite" => "83"
       ],
-      "Brindisi - Pesaro" => [
+      [
         "squadra di casa" => "Brindisi",
         "squadra ospite" => "VL Pesaro",
         "punti squadra di casa" => "68",
         "punti squadra ospite" => "69"
       ],
-      "Milano - Sassari" => [
+      [
         "squadra di casa" => "Olimpia Milano",
         "squadra ospite" => "Dinamo Sassari",
         "punti squadra di casa" => "85",
         "punti squadra ospite" => "68"
       ],
-      "Virtus - Brescia" => [
+      [
         "squadra di casa" => "Virtus Bologna",
         "squadra ospite" => "Brescia",
         "punti squadra di casa" => "77",
@@ -64,12 +64,18 @@ Olimpia Milano - Cantù | 55 - 60
     <title>PHP | Snack-1</title>
   </head>
   <body>
-    <?php
 
-        for ($i=0; $i < count($matches) ; $i++) {
-          echo ($matches[$i]["squadra di casa"]);
-        }
+    <h3>
+      <?php
 
-     ?>
+          for ($i=0; $i < count($matches) ; $i++) {
+
+            echo "<h3>" . $matches[$i]["squadra di casa"] . " - " . ($matches[$i]["squadra ospite"]) . " | " . ($matches[$i]["punti squadra di casa"]) . " - " . ($matches[$i]["punti squadra ospite"]) . "</h3>";
+          }
+
+
+       ?>
+    </h3>
+
   </body>
 </html>
