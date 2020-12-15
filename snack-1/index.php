@@ -11,49 +11,49 @@ L'obbiettivo è stampare a schermo tutte le partite utilizzando questo schema:
 ad esempio:
 Olimpia Milano - Cantù | 55 - 60
 -->
-
 <?php
 
   // Creo un array di matches
 
     $matches = [
-      "Treviso - Cremona" [
+      "Treviso - Cremona" => [
         "squadra di casa" => "Universo Treviso",
         "squadra ospite" => "Cremona",
         "punti squadra di casa" => "68",
         "punti squadra ospite" => "75"
       ],
-      "Cantù - Trieste" [
+      "Cantù - Trieste" => [
         "squadra di casa" => "Cantù",
         "squadra ospite" => "Trieste",
         "punti squadra di casa" => "82",
         "punti squadra ospite" => "79"
       ],
-      "Reggiana - Fortitudo" [
+      "Reggiana - Fortitudo" => [
         "squadra di casa" => "Reggiana",
         "squadra ospite" => "Fortitudo Bologna",
         "punti squadra di casa" => "71",
         "punti squadra ospite" => "83"
       ],
-      "Brindisi - Pesaro" [
+      "Brindisi - Pesaro" => [
         "squadra di casa" => "Brindisi",
         "squadra ospite" => "VL Pesaro",
         "punti squadra di casa" => "68",
         "punti squadra ospite" => "69"
       ],
-      "Milano - Sassari" [
+      "Milano - Sassari" => [
         "squadra di casa" => "Olimpia Milano",
         "squadra ospite" => "Dinamo Sassari",
         "punti squadra di casa" => "85",
         "punti squadra ospite" => "68"
       ],
-      "Virtus - Brescia" [
+      "Virtus - Brescia" => [
         "squadra di casa" => "Virtus Bologna",
         "squadra ospite" => "Brescia",
         "punti squadra di casa" => "77",
         "punti squadra ospite" => "70"
       ],
     ];
+
 
 ?>
 
@@ -64,6 +64,12 @@ Olimpia Milano - Cantù | 55 - 60
     <title>PHP | Snack-1</title>
   </head>
   <body>
+    <?php
 
+        for ($i=0; $i < count($matches) ; $i++) {
+          echo ($matches[$i]["squadra di casa"]);
+        }
+
+     ?>
   </body>
 </html>
